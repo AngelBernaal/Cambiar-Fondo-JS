@@ -1,6 +1,13 @@
-const change = document.getElementById("mode")
+const boton = document.getElementById("cambiar")
+const img = document.getElementById("img")
 const body = document.body
 
-change.addEventListener("click", () => {
+boton.addEventListener("click", () => {
     body.classList.toggle("dark")
-})
+
+    if (body.classList.contains("dark")) {
+        img.src = "sol.png"
+    }else{
+        img.src = "luna-nueva.png"
+    }
+});
